@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background: #121212;
+  --primary: #bbeeff;
+  --dark: #2d2d2d;
+  --secundary: #ff7495;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+header h1 a {
+  color: #fee43e;
+  font-size: 5rem;
+  text-align: center;
+  text-decoration: none;
+  text-decoration: none;
+}
+nav a {
+  color: #fee43e;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 1.5rem;
+  transition: 0.6s;
+}
+nav a:hover,
+header h1 a:hover {
+  color: var(--primary);
+}
+
+header {
+  align-items: center;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 5rem;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.container h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 15rem 0 5rem 0;
+  text-transform: uppercase;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5rem;
+}
+
+.people {
+  justify-self: center;
+  background-color: var(--dark);
+  color: white;
+  font-size: 1.8rem;
+  height: 45rem;
+  padding: 3rem 3rem;
+  width: 35rem;
+  -webkit-box-shadow: 7px 7px 22px -9px #fee43e;
+  box-shadow: 7px 7px 22px -9px #fee43e;
 }
